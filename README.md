@@ -1,5 +1,5 @@
 # Agentic Layout for Interactive-Project-Management-Tool
-The aim of this repo is to upload and access all the learning and supporting materials needed to create a Final AGENTS.md file necessary for building the.  Gantt Application
+The aim of this repo is to upload and access all the learning and supporting materials needed to create a Final AGENTS.md file necessary for building the Gantt Application
 
 # Examples of some of the contents
 
