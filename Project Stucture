@@ -1,0 +1,70 @@
+# Proposed Folder Structure
+Proposed structure. Entries in < > are placeholders; existing application contents have not been expanded into unverified filenames.
+
+gantt-app/                              # Open this root folder in your IDE
+├── AGENTS.md                          # Recommended: repository instructions
+├── README.md
+├── package.json
+├── package-lock.json
+├── .gitignore
+├── .nvmrc                             # Recommended: Node.js version
+├── index.html
+├── <existing build, lint and test configuration files>
+│
+├── src/
+│   ├── AGENTS.md                      # Optional: source-specific instructions
+│   └── <existing source folders, files and tests>
+│
+├── public/
+│   └── <existing static assets>
+│
+├── e2e/
+│   ├── AGENTS.md                      # Optional: test-specific instructions
+│   └── <existing browser test files>
+│
+├── scripts/
+│   └── <existing development and verification scripts>
+│
+├── docs/
+│   ├── architecture.md               # Recommended: verified architecture
+│   ├── release-checklist.md
+│   └── plans/                        # Optional
+│       └── <feature-name>.md         # Feature plan and acceptance criteria
+│
+├── .github/
+│   ├── workflows/
+│   │   └── ci.yml                    # Automated checks
+│   └── pull_request_template.md      # Optional
+│
+├── .codex/                           # Optional
+│   └── config.toml                   # Project Codex settings
+│
+└── .agents/                          # Optional
+    └── skills/
+        └── gantt-feature/
+            └── SKILL.md              # Custom reusable development workflow
+
+**Proposed structure for `gantt-app/`. Open this repository root in your IDE. Preserve the existing application folders and configuration files.**
+
+| Path relative to `gantt-app/`                 | Purpose                                                                                                                                                                                                                          | Status      |
+| --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
+| **`AGENTS.md`**                               | Repository instructions: architecture, commands, coding conventions, testing, approval requirements and Git workflow. Place beside `package.json`. [Documentation](https://learn.chatgpt.com/docs/agent-configuration/agents-md) | Recommended |
+| `README.md`                                   | Project overview and installation, development and testing instructions                                                                                                                                                          | Recommended |
+| `package.json`                                | Dependencies and runnable development, build and test commands                                                                                                                                                                   | Keep        |
+| `package-lock.json`                           | Locked dependency versions                                                                                                                                                                                                       | Keep        |
+| `.gitignore`                                  | Exclude dependencies, generated output and local secrets                                                                                                                                                                         | Keep        |
+| `.nvmrc`                                      | Agreed Node.js version                                                                                                                                                                                                           | Recommended |
+| `index.html`                                  | Vite application entry page                                                                                                                                                                                                      | Keep        |
+| `src/`                                        | Application code and existing unit/component tests; retain current organisation                                                                                                                                                  | Keep        |
+| `public/`                                     | Static assets                                                                                                                                                                                                                    | Keep        |
+| `e2e/`                                        | Browser tests                                                                                                                                                                                                                    | Keep        |
+| `scripts/`                                    | Existing development and verification scripts                                                                                                                                                                                    | Keep        |
+| Root build, lint and test configuration files | Existing Vite, ESLint and test runner settings                                                                                                                                                                                   | Keep        |
+| `docs/architecture.md`                        | Verified architecture, data flow and design constraints                                                                                                                                                                          | Recommended |
+| `docs/plans/<feature-name>.md`                | Feature scope, approved plan, acceptance criteria and progress                                                                                                                                                                   | Optional    |
+| `docs/release-checklist.md`                   | Review, merge and release checks                                                                                                                                                                                                 | Keep        |
+| `.github/workflows/ci.yml`                    | Automated checks for pull requests and branches                                                                                                                                                                                  | Recommended |
+| `.github/pull_request_template.md`            | Consistent change descriptions and validation evidence                                                                                                                                                                           | Optional    |
+| `.codex/config.toml`                          | Project Codex settings; loaded for trusted projects. [Documentation](https://learn.chatgpt.com/docs/config-file/config-basic)                                                                                                    | Optional    |
+| `.agents/skills/gantt-feature/SKILL.md`       | Custom reusable workflow for developing and validating Gantt features. [Documentation](https://learn.chatgpt.com/docs/build-skills)                                                                                              | Optional    |
+| `src/AGENTS.md` or `e2e/AGENTS.md`            | Additional instructions specific to that directory, when necessary. [Documentation](https://learn.chatgpt.com/docs/agent-configuration/agents-md)                                                                                | Optional    |
